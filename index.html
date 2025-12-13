@@ -31,6 +31,22 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            font-family: 'Courier New', monospace;
+        }
+        .typewriter {
+            display: inline-block;
+            overflow: hidden;
+            border-right: 3px solid #00d4ff;
+            white-space: nowrap;
+            animation: typing 2s steps(11) forwards, blink 0.7s step-end infinite;
+            width: 0;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 11ch; }
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
         }
         .coming-soon {
             font-size: 1.5rem;
@@ -57,7 +73,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>codeweb.com</h1>
+        <h1><span class="typewriter">codeweb.com</span></h1>
         <div class="divider"></div>
         <p class="coming-soon">Coming Soon</p>
         <p class="tagline">Something amazing is in the works. Stay tuned.</p>
