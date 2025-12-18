@@ -6,6 +6,10 @@ app = Flask(__name__, static_folder='.')
 def index():
     return send_from_directory('.', 'index.html')
 
+@app.route('/og-image.png')
+def og_image():
+    return send_from_directory('.', 'og-image.png')
+
 @app.route('/health')
 def health():
     return {'status': 'healthy'}, 200
