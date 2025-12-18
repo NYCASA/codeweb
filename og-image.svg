@@ -1,0 +1,43 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    <linearGradient id="divider" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="100%" style="stop-color:#7b2cbf"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Main title -->
+  <text x="600" y="280"
+        font-family="Courier New, monospace"
+        font-size="72"
+        font-weight="700"
+        fill="#00d4ff"
+        text-anchor="middle"
+        filter="url(#glow)">codeweb.com</text>
+
+  <!-- Divider -->
+  <rect x="500" y="320" width="200" height="4" rx="2" fill="url(#divider)"/>
+
+  <!-- Coming Soon -->
+  <text x="600" y="400"
+        font-family="Segoe UI, Tahoma, sans-serif"
+        font-size="32"
+        fill="#a0a0a0"
+        text-anchor="middle"
+        letter-spacing="8">COMING SOON</text>
+</svg>
